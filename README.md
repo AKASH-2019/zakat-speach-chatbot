@@ -1,8 +1,8 @@
-# 🕌 Voice RAG Assistant
+# 🕌 Zakat Voice RAG Assistant
 
 > English-only RAG assistant with voice input/output.  
 > Built with **FastAPI**, **LangChain**, **Whisper**, and **gTTS**, with cloud access via **ngrok**.
-
+> Drive link - https://drive.google.com/drive/folders/1zBzP2r8NNGbNsQYohUUTzfLoZOz7pS05?usp=sharing
 ---
 
 ## 📂 Project Structure
