@@ -3,6 +3,7 @@
 > English-only RAG assistant with voice input/output.  
 > Built with **FastAPI**, **LangChain**, **Whisper**, and **gTTS**, with cloud access via **ngrok**.
 > Drive link - https://drive.google.com/drive/folders/1zBzP2r8NNGbNsQYohUUTzfLoZOz7pS05?usp=sharing
+> video: https://drive.google.com/file/d/1Uhob-l-Lf7KkmTogWxpa-5bCdH6dynij/view?usp=sharing
 ---
 
 ## 📂 Project Structure
