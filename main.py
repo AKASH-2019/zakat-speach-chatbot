@@ -1,15 +1,6 @@
 """
 main.py  (fixed)
 ----------------
-FastAPI server for the Voice RAG Assistant.
-
-BUGS FIXED:
-1. _build_response() signature was missing the language param — crashed when
-   called from upload_audio() with 4 arguments.
-2. TTS output_filename is now passed as a bare filename (not a full path),
-   preventing the double-path bug in text_to_speech().
-3. upload_audio error handling now returns the actual exception message so
-   "Server error 500" shows a real cause in the UI.
 """
 
 import os
