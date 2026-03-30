@@ -3,29 +3,6 @@ rag_pipeline.py  (fixed v3 — anti-hallucination)
 -------------------------------------------------
 English-only RAG pipeline.
 
-HALLUCINATION FIXES IN THIS VERSION:
-
-1. TOPIC GATE (pre-LLM):
-   Before calling the LLM, we check whether the query mentions any word
-   that actually appears in the retrieved context.  If there is zero lexical
-   overlap between the query and the top-ranked chunks, TinyLlama will
-   hallucinate a connection — so we return NOT_FOUND immediately without
-   ever calling it.  "donald trump" shares no words with a Zakat corpus →
-   blocked before the LLM sees it.
-
-2. STRONGER SYSTEM PROMPT:
-   Added an explicit numbered rule list that TinyLlama responds to better
-   than a single soft sentence.  The new prompt explicitly forbids combining
-   context topics with unrelated query terms and demands the exact refusal
-   string rather than a paraphrase.
-
-3. HALLUCINATION DETECTOR (post-LLM):
-   After generation, scan the answer for words that appear in the query but
-   are absent from the retrieved context.  If any such "foreign" word
-   appears in the answer, the model invented that connection → discard and
-   return NOT_FOUND.
-
-4. CONFIDENCE THRESHOLD: 0.28 (reasonable for MiniLM cosine scores).
 """
 
 import os
