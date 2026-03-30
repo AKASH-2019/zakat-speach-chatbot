@@ -3,13 +3,6 @@ voice_pipeline.py  (fixed)
 --------------------------
 English-only voice pipeline.
 
-BUGS FIXED:
-1. process_voice_query() now accepts audio_suffix and force_language kwargs
-   so main.py can call it without a TypeError.
-2. text_to_speech() now accepts a language param (ignored for English but
-   stops main.py from crashing with an unexpected keyword argument).
-3. TTS output_filename is now treated as a bare filename, not a full path,
-   so the final path is always TTS_OUTPUT_DIR/filename with no duplication.
 """
 
 import os
